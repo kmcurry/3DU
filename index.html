@@ -16,14 +16,14 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>3D U.</h1>
+        <h1><a onclick="show('m');">3D U.</a></h1>
         <h4>Learn in every dimension</h4>
 
 
         <ul>
-          <li><a href="#for-educators">for <strong>Educators</strong></a></li>
-          <li><a href="#for-students">for <strong>Students</strong></a></li>
-          <li><a href="#for-anyone">for <strong>Anyone</strong></a></li>
+          <li><a onclick="show('e');">for <strong>Educators</strong></a></li>
+          <li><a onclick="show('s');">for <strong>Students</strong></a></li>
+          <li><a onclick="show('a');">for <strong>Anyone</strong></a></li>
         </ul>
         
         <h3>
@@ -35,24 +35,29 @@
         <a name="subjects" class="anchor" href="#subjects"><span class="octicon octicon-link"></span></a>Dozens of subjects</h3>
 
         <p>Anatomy, Chemistry, Mechanics, Physics, Plumbing and much more</p>
+        
+        <h3>
+        <a name="levels" class="anchor" href="#levels"><span class="octicon octicon-link"></span></a>All levels</h3>
+
+        <p>K-12, 2-4 year college, university, skills certification</p>
 
         <h3>
         <a name="publish" class="anchor" href="#constructables"><span class="octicon octicon-link"></span></a>You 3D U.</h3>
 
-        <p>Create and <strong>sell</strong> your own learning modules</p>
+        <p>Create and sell your own learning modules</p>
 
         <h3>
         <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Sales</h3>
 
         <p><a href="mailto:kevin@bridgeborn.com?subject=3DU">kevin@bridgeborn.com</a></p>
       </header>
-      <section>
+      <section id="main-section">
         <h1>
 <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Let's upgrade</h1>
 
-<p style="font-size:20px;">Learning material doesn't keep up with technology.</p>
-<p style="font-size:20px;">Students perform better and are more engaged with 3D in learning.</p>
-<p style="font-size:20px;">Introducing the world's first 3D learning management system powered by Bridgeworks</p>
+<p class="p my-p">Learning material doesn't keep up with technology.</p>
+<p class="p my-p">Students perform better and are more engaged with 3D in learning.</p>
+<p class="p my-p">Introducing the world's first 3D learning management system powered by Bridgeworks</p>
 
 
 <p>
@@ -104,19 +109,42 @@
         </div>
       </div>
 
-      <!-- Controls -->
-      <a class="" href="#carousel-example-generic" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="" href="#carousel-example-generic" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
-    </div>
-</p>
+      <!-- Controls --> <a class="" href="#carousel-example-generic" data-slide="prev"> <span class="glyphicon
+      glyphicon-chevron-left"></span> </a> <a class="" href="#carousel-example-generic" data-slide="next"> <span
+      class="glyphicon glyphicon-chevron-right"></span> </a> </div> </p> 
+    
       </section>
+      
+      <section id="for-educators" class="section my-section">
+          <p class="p my-p">
+              Engage your students like never before. Runs on computers you have now. No special equipment needed. Use your "smart" board to display and interact with rich content in front of the class.
+          </p> 
+          <p class="p my-p">Units of instruction from $19</p> 
+          <p class="p my-p">Complete curricula from $89</p>
+          <p class="p my-p">Subscriptions from $9/mo</p>
+          <p class="p my-p">Coming in 2014: Build and sell your own units of instruction</p>
+      </section>
+      
+      <section id="for-students" class="section my-section">
+          <p class="p my-p">
+              Engage with learning like never before. No special equipment needed.
+          </p> 
+          <p class="p my-p">Units of instruction FREE</p> 
+          <p class="p my-p">Complete curricula FREE</p>
+          <p class="p my-p">Subscriptions FREE</p> 
+      </section>
+      
+      <section id="for-anyone" class="section my-section">
+          <p class="p my-p">
+              3D that's this easy and accessible opens up a universe of possibilities.
+          </p>
+          <p class="p my-p">
+              We're publishing new learning material every week. Soon you'll be able to publish and sell your own material here, too.
+          </p>
+      </section>
+      
       <footer>
-        <p>This project is maintained by <a href="https://github.com/kmcurry">kmcurry</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
@@ -125,6 +153,52 @@
         <script src="https://code.jquery.com/jquery.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        
+        <script>
+        $('#for-educators').hide().fadeOut('slow');
+        $('#for-students').hide().fadeOut('slow');
+        $('#for-anyone').hide().fadeOut('slow');
+        $('#plumbing').hide().fadeOut('slow');
+        function show(s)
+        {
+            switch (s)
+            {
+            case 'e':
+                $('#main-section').hide().fadeOut('slow');
+                $('#for-students').hide().fadeOut('slow');
+                $('#for-anyone').hide().fadeOut('slow');
+                $('#for-educators').hide().fadeIn('slow');
+                break;
+            case 'm':
+                $('#for-educators').hide().fadeOut('slow');
+                $('#for-students').hide().fadeOut('slow');
+                $('#for-anyone').hide().fadeOut('slow');
+                $('#main-section').hide().fadeIn('slow');
+                break;
+            case 's':
+                $('#main-section').hide().fadeOut('slow');
+                $('#for-educators').hide().fadeOut('slow');
+                $('#for-anyone').hide().fadeOut('slow');
+                $('#for-students').hide().fadeIn('slow');
+                break;
+            case 'a':
+                $('#main-section').hide().fadeOut('slow');
+                $('#for-educators').hide().fadeOut('slow');
+                $('#for-students').hide().fadeOut('slow');
+                $('#for-anyone').hide().fadeIn('slow');
+                break;
+            case 'p':
+                $('#main-section').hide().fadeOut('slow');
+                $('#for-educators').hide().fadeOut('slow');
+                $('#for-students').hide().fadeOut('slow');
+                $('#for-anyone').hide().fadeOut('slow');
+                $('#plumbing').hide().fadeIn('slow');
+                break;
+            }
+        }
+         
+         
+        </script>
     
   </body>
 </html>

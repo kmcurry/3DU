@@ -36,6 +36,7 @@ a {
   color:#39c;
   font-weight:400;
   text-decoration:none;
+  cursor:pointer;
 }
 
 a small {
@@ -252,4 +253,16 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+
+.my-section {
+    position:absolute;
+    top:74px;
+    left:520px;
+    height:800px;
+    background-color:#ffffff;
+}
+
+.my-p {
+     font-size:20px;
 }
