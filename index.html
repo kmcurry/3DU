@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>3DU - Learn in every dimension</title>
+    <title>3DU - Learning in every dimension</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,8 +17,7 @@
     <div class="wrapper">
       <header>
         <h1><a onclick="show('m');">3D U.</a></h1>
-        <h4>Learn in every dimension</h4>
-
+        <h4>Learning in every dimension</h4>
 
         <ul>
           <li><a onclick="show('e');">for <strong>Educators</strong></a></li>
@@ -32,7 +31,7 @@
         <p>In your browser. On your tablet.</p>
 
         <h3>
-        <a name="subjects" class="anchor" href="#subjects"><span class="octicon octicon-link"></span></a>Dozens of subjects</h3>
+        <a name="subjects" class="anchor" href="#subjects"><span class="octicon octicon-link"></span></a>Dozens of <a onclick="show('c');">subjects</a></h3>
 
         <p>Anatomy, Chemistry, Mechanics, Physics, Plumbing and much more</p>
         
@@ -58,6 +57,7 @@
 <p class="p my-p">Learning material doesn't keep up with technology.</p>
 <p class="p my-p">Students perform better and are more engaged with 3D in learning.</p>
 <p class="p my-p">Introducing the world's first 3D learning management system powered by Bridgeworks</p>
+<h3>Engage with learning like never before.</h3>
 
 
 <p>
@@ -116,8 +116,14 @@
       </section>
       
       <section id="for-educators" class="section my-section">
+          <h3>
+              Engage your students like never before.
+          </h3>
           <p class="p my-p">
-              Engage your students like never before. Runs on computers you have now. No special equipment needed. Use your "smart" board to display and interact with rich content in front of the class.
+              Use your "smart" board to display and interact with rich content in front of the class.
+          </p>
+          <p class="p my-p">
+              Runs on computers you have now.
           </p> 
           <p class="p my-p">Units of instruction from $19</p> 
           <p class="p my-p">Complete curricula from $89</p>
@@ -126,21 +132,78 @@
       </section>
       
       <section id="for-students" class="section my-section">
-          <p class="p my-p">
-              Engage with learning like never before. No special equipment needed.
-          </p> 
+          <h3>
+              Connect with learning in a totally new way.
+          </h3> 
           <p class="p my-p">Units of instruction FREE</p> 
           <p class="p my-p">Complete curricula FREE</p>
           <p class="p my-p">Subscriptions FREE</p> 
+          <p class="p my-p">No special equipment needed.</p>
       </section>
       
       <section id="for-anyone" class="section my-section">
-          <p class="p my-p">
+          <h3>
               3D that's this easy and accessible opens up a universe of possibilities.
-          </p>
+          </h3>
           <p class="p my-p">
               We're publishing new learning material every week. Soon you'll be able to publish and sell your own material here, too.
           </p>
+      </section>
+      
+      <section id="catalog" class="section my-section" style="font-size:18px;">
+          <ol>
+              <li>
+                  Anatomy
+              </li>
+              <li>
+                  Architecture
+              </li>
+              <li>
+                  Biology
+              </li>
+              <li>
+                  Chemistry
+              </li>
+              <li>
+                  Engineering
+              </li>
+              <li>
+                  Environment
+              </li>
+              <li>
+                  Geography
+              </li>
+              <li>
+                  Geology
+              </li>
+              <li>
+                  History
+              </li>
+              <li>
+                  Mathematics
+              </li>
+              <li>
+                  Oceanography
+              </li>
+              <li>
+                  Parts & Inventory
+              </li>
+              <li>
+                  Plumbing
+              </li>
+              <li>
+                  Power Generation
+              </li>
+              <li>
+                  Robotics
+              </li>
+              <li>
+                  Repairs
+              </li>
+              <li>
+                  Space Exploration
+              </li>
+          </ol>
       </section>
       
       <footer>
@@ -158,7 +221,7 @@
         $('#for-educators').hide().fadeOut('slow');
         $('#for-students').hide().fadeOut('slow');
         $('#for-anyone').hide().fadeOut('slow');
-        $('#plumbing').hide().fadeOut('slow');
+        $('#catalog').hide().fadeOut('slow');
         function show(s)
         {
             switch (s)
@@ -167,32 +230,36 @@
                 $('#main-section').hide().fadeOut('slow');
                 $('#for-students').hide().fadeOut('slow');
                 $('#for-anyone').hide().fadeOut('slow');
+                $('#catalog').hide().fadeOut('slow');
                 $('#for-educators').hide().fadeIn('slow');
                 break;
             case 'm':
                 $('#for-educators').hide().fadeOut('slow');
                 $('#for-students').hide().fadeOut('slow');
                 $('#for-anyone').hide().fadeOut('slow');
+                $('#catalog').hide().fadeOut('slow');
                 $('#main-section').hide().fadeIn('slow');
                 break;
             case 's':
                 $('#main-section').hide().fadeOut('slow');
                 $('#for-educators').hide().fadeOut('slow');
                 $('#for-anyone').hide().fadeOut('slow');
+                $('#catalog').hide().fadeOut('slow');
                 $('#for-students').hide().fadeIn('slow');
                 break;
             case 'a':
                 $('#main-section').hide().fadeOut('slow');
                 $('#for-educators').hide().fadeOut('slow');
                 $('#for-students').hide().fadeOut('slow');
+                $('#catalog').hide().fadeOut('slow');
                 $('#for-anyone').hide().fadeIn('slow');
                 break;
-            case 'p':
+            case 'c':
                 $('#main-section').hide().fadeOut('slow');
                 $('#for-educators').hide().fadeOut('slow');
                 $('#for-students').hide().fadeOut('slow');
                 $('#for-anyone').hide().fadeOut('slow');
-                $('#plumbing').hide().fadeIn('slow');
+                $('#catalog').hide().fadeIn('slow');
                 break;
             }
         }
