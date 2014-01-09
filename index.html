@@ -61,7 +61,7 @@
     
       </section>
       
-      <section id="carousel" class="section my-section" style="top:360px;">
+      <section id="carousel" class="section my-section" style="top:366px;">
           <p>
               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -152,12 +152,13 @@
       </section>
       
       <section id="catalog" class="section my-section" style="font-size:18px;height:200px;">
+          <p class="p my-p">Try these demos</p>
           <table>
               <tr>
                   <td>
                       <ol>
                           <li>
-                              <!-- <a href="http://dev.bridgeborn.com/bwschools/">3D Programming</a> --> 3D Programming
+                              <a onclick="demo('3');">3D Programming</a>
                           </li>
                           <li>
                               Anatomy
@@ -206,7 +207,7 @@
                               Parts & Inventory
                           </li>
                           <li>
-                              Plumbing
+                              <a onclick="demo('p');">Plumbing</a>
                           </li>
                           <li>
                               Power Generation
@@ -226,6 +227,10 @@
           </table>
       </section>
       
+      <section id="demo" class="section my-section" style="height:200px;top:380px;">
+          <iframe id="demo-frame" width="500" height="300"></iframe>
+      </section>
+      
       <footer>
         
       </footer>
@@ -242,8 +247,12 @@
         $('#for-students').hide().fadeOut('slow');
         $('#for-anyone').hide().fadeOut('slow');
         $('#catalog').hide().fadeOut('slow');
+        $('#demo').hide().fadeOut('slow');
         function show(s)
         {
+            $('#demo').hide().fadeOut('slow');
+            $('#carousel').hide().fadeIn('slow');
+            //todo: optimize code
             switch (s)
             {
             case 'e':
@@ -281,7 +290,29 @@
                 $('#for-anyone').hide().fadeOut('slow');
                 $('#catalog').hide().fadeIn('slow');
                 break;
+            default:
+                break;
             }
+        }
+        
+        function demo(d)
+        {
+            var frame = document.getElementById("demo-frame");
+            $('#carousel').hide().fadeOut('slow');
+            $('#demo').hide().fadeIn('slow');
+            
+            switch (d)
+            {
+            case '3':
+                frame.src = "http://dev.bridgeborn.com/bwschools/bwjs/Demo/Default/grid.htm";
+                break;
+            case 'p':
+                frame.src = "http://dev.bridgeborn.com/bwschools/bwjs/Demo/Ball Valve/index.htm";
+                break;
+            default:
+                break;
+            }
+            
         }
          
          
