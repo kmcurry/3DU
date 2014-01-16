@@ -52,15 +52,17 @@
       </header>
       <section id="main-section" style="height:200px;">
         <h1>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Let's upgrade</h1>
-
+"A study of the impact of 3D in the classroom has found that it improves test results by an average of 17%." <br/>
+</h1>
+<p>- <a href="http://www.bbc.co.uk/news/technology-15115059">BBC News report</a></p>
+<!--
 <p class="p my-p">Learning material doesn't keep up with technology.</p>
 <p class="p my-p">Students perform better and are more engaged with 3D in learning.</p>
 <p class="p my-p">Introducing the world's first 3D learning management system powered by Bridgeworks</p>
+-->
 <h3>Engage with learning like never before.</h3>
     
       </section>
-      
       <section id="carousel" class="section my-section" style="top:366px;">
           <p>
               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -74,22 +76,29 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                   <div class="item active">
+                      <a onclick="demo('6')">
                       <center><img alt="circuitbreaker" src="images/circuitbreaker.png" width="66%"></center>
                     <div class="carousel-caption">
                         Mechanics
                     </div>
+                    </a>
                   </div>
                   <div class="item">
-                      <center><img alt="anatomy" src="images/anatomy.png" height="39%" width="39%"></center>
+                      <a onclick="demo('2')">
+                      <center>
+                          <img alt="anatomy" src="images/anatomy.png" height="39%" width="39%"></center>
                     <div class="carousel-caption">
                         Anatomy
                     </div>
+                    </a>
                   </div>
                   <div class="item">
+                      <a onclick="demo('4')">
                       <center><img alt="plumbing" src="images/plumbing.png"></center>
                     <div class="carousel-caption">
                         Plumbing
                     </div>
+                    </a>
                   </div>
                   <div class="item">
                       <center><img alt="medical" src="images/medical.png"></center>
@@ -104,10 +113,12 @@
                     </div>
                   </div>
                   <div class="item">
+                      <a onclick="demo('1');">
                       <center><img alt="programming" src="images/programming.png" height="93%" width="93%"></center>
                     <div class="carousel-caption">
                         3D Programming
                     </div>
+                </a>
                   </div>
                 </div>
 
@@ -115,7 +126,7 @@
                 glyphicon-chevron-left"></span> </a> <a class="" href="#carousel-example-generic" data-slide="next"> <span
                 class="glyphicon glyphicon-chevron-right"></span> </a> </div> </p> 
       </section>
-      
+
       <section id="for-educators" class="section my-section" style="height:200px;">
           <h3>
               Engage your students like never before.
@@ -182,7 +193,7 @@
                               Environment
                           </li>
                           <li>
-                              Geography
+                              <a onclick="demo('7');">Geography</a>
                           </li>
                           <li>
                               Geology
@@ -320,6 +331,9 @@
                 break;
             case '6':
                 frame.src = "http://dev.bridgeborn.com/bwschools/bwjs/Demo/Engine/default.htm";
+                break;
+            case '7':
+                frame.src = "http://dev.bridgeborn.com/bwschools/bwjs/Demo/Geography/default.htm";
                 break;
             default:
                 break;
