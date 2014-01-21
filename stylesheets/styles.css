@@ -255,14 +255,10 @@ footer {
   }
 }
 
-.my-section {
-    position:absolute;
-    top:74px;
-    left:520px;
-    height:800px;
-    background-color:#ffffff;
-}
-
 .my-p {
      font-size:20px;
+}
+
+#demo-frame {
+    border: none;
 }
