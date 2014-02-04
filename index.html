@@ -12,6 +12,39 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+        <script type="text/javascript">
+        function enlargeDemo(w, h) {
+            var sec = document.getElementById('demo');
+            var frm = document.getElementById('demo-frame');
+            if (sec != null && frm != null) {
+                sec.style.position = "absolute";
+
+                
+                frm.style.width = w;
+                frm.style.height = h;
+                
+                var enl = document.getElementById('enlarge');
+                $(enl).text("minimize");
+                $(enl).attr("onclick", "minimizeDemo('500px','354px')");
+            }
+        }
+        
+        function minimizeDemo(w,h) {
+            var sec = document.getElementById('demo');
+            var frm = document.getElementById('demo-frame');
+            if (sec != null && frm != null) {
+                sec.style.position = "relative";
+                
+                frm.style.width = w;
+                frm.style.height = h;
+                
+                var enl = document.getElementById('enlarge');
+                $(enl).text("enlarge");
+                $(enl).attr("onclick", "enlargeDemo('800px','600px')");
+            }
+            
+        }
+        </script>
   </head>
   <body>
     <div class="wrapper">
@@ -43,7 +76,8 @@
         <h3>
         <a name="publish" class="anchor" href="#constructables"><span class="octicon octicon-link"></span></a>You 3D U.</h3>
 
-        <p>Create and sell your own learning modules</p>
+        <p>Present a class project with interactive 3D</p>
+        <p>Create, share and sell your own learning modules</p>
 
         <h3>
         <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Sales</h3>
@@ -52,16 +86,9 @@
       </header>
           
       <section id="top-section">
-        <h1>
-"A study of the impact of 3D in the classroom has found that it improves test results by an average of 17%." <br/>
-</h1>
-<p>- <a href="http://www.bbc.co.uk/news/technology-15115059">BBC News report</a></p>
-<!--
-<p class="p my-p">Learning material doesn't keep up with technology.</p>
-<p class="p my-p">Students perform better and are more engaged with 3D in learning.</p>
-<p class="p my-p">Introducing the world's first 3D learning management system powered by Bridgeworks</p>
--->
-<h3>Engage with learning like never before.</h3>
+        <h2>
+Engage with learning like never before.
+</h2>
     
       </section>
       
@@ -106,9 +133,11 @@
               <tr>
                   <td>
                       <ol>
+                          <!--
                           <li>
                               <a onclick="demo('1');">3D Programming</a>
                           </li>
+                              -->
                           <li>
                               <a onclick="demo('2');">Anatomy</a>
                           </li>
@@ -116,7 +145,7 @@
                               <a onclick="demo('3');">Architecture</a>
                           </li>
                           <li>
-                              <!-- <a href="http://dev.bridgeborn.com/bwschools/ATVI" target="top">Auto Mechanics</a>--> Auto Mechanics
+                              <a onclick="demo('11')";>Auto Mechanics</a>
                           </li>
                           <li>
                               Biology
@@ -233,7 +262,8 @@
                 class="glyphicon glyphicon-chevron-right"></span> </a> </div> </p> 
       </section>
       
-      <section id="demo" class="section">
+      <section id="demo" class="section" style="z-index:2;">
+          <a id="enlarge" onclick="enlargeDemo('800px', '600px');">enlarge</a>
           <iframe id="demo-frame" width="500" height="354"></iframe>
       </section>
       
@@ -257,12 +287,12 @@
         $('#for-educators').hide().fadeOut('slow');
         $('#for-students').hide().fadeOut('slow');
         $('#for-anyone').hide().fadeOut('slow');
-        $('#catalog').hide().fadeOut('slow');
+        //$('#catalog').hide().fadeOut('slow');
         $('#demo').hide().fadeOut('slow');
         function show(s)
         {
-            $('#demo').hide().fadeOut('slow');
-            $('#carousel').hide().fadeIn('slow');
+            //$('#demo').hide().fadeOut('slow');
+            //$('#carousel').hide().fadeIn('slow');
             //todo: optimize code
             switch (s)
             {
@@ -343,6 +373,9 @@
                 break;
             case '10':
                 frame.src = "http://dev.bridgeborn.com/bwschools/bwjs/Demo/Paleontology/";
+                break;
+            case '11':
+                frame.src = "http://localhost:8888/bwjs/Demo/Brakes/";
                 break;
             default:
                 break;
